@@ -1,4 +1,4 @@
-Package: Ruff
+Package: C_Ruff
 Type: Package
 Title: Estimation of stature for Ruff's European data
 Version: 0.1.0
