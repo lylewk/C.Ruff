@@ -9,7 +9,7 @@
 #' @details Uses the classical calibration method.
 #' @return Plot and other info.
 #' @export
-K_run=function(i.which='Fem',which.dat=2){
+K_run=function(i.which='Fem',which.dat=2,area=0.5){
   if(which.dat==2) data(Europe2)
   else(data(Europe))
   bones=c('Fem','Tib','Hum','Rad')
@@ -17,5 +17,5 @@ K_run=function(i.which='Fem',which.dat=2){
   parms=K_reg[Row,]
   if(which.dat==2) dat = Europe2[,c(7,7+Row)]
   else(dat = Europe[,c(7,7+Row)])
-  run_it(parms,dat,i.which,'Konigsberg & Jantz (2018),')
+  run_it(parms,dat,i.which,'Konigsberg & Jantz (2018),',area)
 }

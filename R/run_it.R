@@ -1,11 +1,12 @@
-run_it=function(parms,dat,i.which,observer){
+run_it=function(parms,dat,i.which,observer,area){
 labs=c('Fem','Tib','Hum','Rad')
 labs2=c('Femur','Tibia','Humerus','Radius')
 bone=which(i.which==labs)
 
 est.stat=function(y){
   stat=parms[1]*y+parms[2]
-  lo=-.6745*parms[3]
+  z=qnorm((1-area)/2)
+  lo=z*parms[3]
   hi=-lo
   return(round(c(lo+stat,stat,stat+hi)))
 }
