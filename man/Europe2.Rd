@@ -29,7 +29,7 @@ Data as follows:
  \item{ID:}{  Unique identifier}
  \item{Museum:}{  Museum}
  \item{Sex:}{  Sex as a factor, either "Female" or "Male"}
- \item{State:}{  Stature in mm.}
+ \item{Stat:}{  Stature in mm.}
  \item{Fem:}{  Maximum femur length in mm.}
  \item{Tib:}{  Maximum tibia length in mm.}
  \item{Hum:}{  Maximum humerus length in mm.}

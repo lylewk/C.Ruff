@@ -4,23 +4,55 @@
 \alias{K_run}
 \title{Konigsberg & Jantz (2018) stature regressions}
 \usage{
-K_run(i.which = "Fem", which.dat = 2)
+K_run(i.which = "Fem", which.dat = 1, area = 0.5)
 }
 \arguments{
-\item{which.dat}{Integer indicating which data to use from Ruff's European data. The default
-default value is 2, which uses "Europe2" or any other integer which uses "Europe".
-See the description of these two data objects.}
+\item{i.which}{Character indicating which long bone to use.  Possible values are
+"Fem" for maximum femur length, "Tib" for maximum tibia length, "Hum" for maximum
+humerus length, or "Rad" for maximum radius length.  Default: "Fem"}
 
-\item{w.which}{Character name indicating which long bone to use.  Possible
-values are "Fem" for femur, "Tib" for tibia, "Hum" for humerus, and
-"Rad" for radius.  Default: "Fem"}
+\item{which.dat}{Integer indicating which data to use. Possible values are 1 for
+"Europe" data, 2 for "Europe2" data, or any other integer for "Italy". Default=1}
+
+\item{area}{Decimal value giving the proportion for the prediction interval.  Value
+must be greater than 0.0 and less than 1.0. Default = 0.5}
 }
 \value{
-Plot and other info.
+Does a plot of statures estimated from regressions using summary statistics
+from Konigsberg and Jantz (2018) against the (modified) Fully statures.  The
+equations are calculated using the (large sample) classical calibration method
+given in Konigsberg et al. (1998).  Also returns the overall bias and the number
+of total cases that are below the lower bounds of the prediction intervals, within
+the prediction intervals, and above the upper bound for the prediction intervals.
+These measures (bias and classification relative to prediction interval bounds)
+are also given for the lower quartile of the data (by modified Fully stature),
+upper quartile, and middle 50 percent of the data.
 }
 \description{
-Does plot and returns some counts
+Does plot of estimated statures against modified Fully statures
+for Ruff's European data.  The analyzed data can be from statures estimated from
+skeletal height and "partial" skeletal height, just skeletal height, or skeletal
+and "partial" skeletal height for just Italian females.
 }
 \details{
-Uses the classical calibration method.
+Estimates statures using \link{Europe} data with modified Fully statures
+from skeletal height or partial skeletal height, \link{Europe2} data set from
+skeletal height only, or \link{Italy} subset of "Europe" that only includes Italian females.
+The regression equations are from summary statistics in Konigsberg and Jantz (2018).
+}
+\examples{
+# Default using femur, European data, and area = 0.5
+  K_run()
+# Using tibia, Italian female data, and default area = 0.5
+  K_run(i.which='Tib',which.dat=3)
+}
+\references{
+Konigsberg, L. W., & Meadows Jantz, L. (2018). Multivariate regression
+ methods for the analysis of stature. In K. Latham, E. Bartelink,
+ & M. Finnegan (Eds.), \emph{New Perspectives in Forensic Human Skeletal
+ Identification} (pp. 87-104). Cambridge, MA: Academic Press.
+
+ Konigsberg, L. W., Hens, S. M., Jantz, L. M., & Jungers, W. L. (1998).
+ Stature estimation and calibration: Bayesian and maximum likelihood perspectives
+ in physical anthropology. \emph{Yearbook of Physical Anthropology}, 41, 65-92.
 }

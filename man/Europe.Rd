@@ -17,7 +17,7 @@ See "European data set: Excel" and "Notes" under "Special Projects"
 data(Europe)
 }
 \description{
-A dataset Europeans.  The data come from Ruff (2018).  Statures were
+A dataset of Europeans.  The data come from Ruff (2018).  Statures were
 estimated using modifications of the Fully method (Niskanen & Ruff 2018; Raxter et
 al. 2006, 2007).
 }
@@ -30,7 +30,7 @@ Data as follows:
  \item{ID:}{  Unique identifier}
  \item{Museum:}{  Museum}
  \item{Sex:}{  Sex as a factor, either "Female" or "Male"}
- \item{State:}{  Stature in mm.}
+ \item{Stat:}{  Stature in mm.}
  \item{Fem:}{  Maximum femur length in mm.}
  \item{Tib:}{  Maximum tibia length in mm.}
  \item{Hum:}{  Maximum humerus length in mm.}
