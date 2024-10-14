@@ -1,3 +1,4 @@
+#' @export
 make_reg= function(){
   regs=matrix(NA,nr=4,nc=3)
   regs[,1]=V.2015[1,1]/V.2015[1,2:5]

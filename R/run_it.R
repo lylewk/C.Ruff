@@ -1,3 +1,4 @@
+#' @export
 run_it=function(parms,dat,i.which,observer,area){
 labs=c('Fem','Tib','Hum','Rad')
 labs2=c('Femur','Tibia','Humerus','Radius')
@@ -19,7 +20,7 @@ for(i in 1:N){
 }
 out=data.frame(dat[,1],out)
 colnames(out)=c('actual','lo.25','est','hi.25')
-windows()
+#windows()
 plot(out$actual,out$est,xlab='Actual',ylab='Estimated',
      main=paste(observer,labs2[bone]))
 abline(0,1)
