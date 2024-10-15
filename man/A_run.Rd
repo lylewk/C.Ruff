@@ -12,7 +12,7 @@ A_run(i.which = "Fem", which.dat = 1, area = 0.5)
 humerus length, or "Rad" for maximum radius length.  Default: "Fem"}
 
 \item{which.dat}{Integer indicating which data to use. Possible values are 1 for
-"Europe" data, 2 for "Europe2" data, or any other integer for "Italy". Default=1}
+"Europe" data, 2 for "Europe2" data, or any other integer for "Iberia". Default=1}
 
 \item{area}{Decimal value giving the proportion for the prediction interval.  Value
 must be greater than 0.0 and less than 1.0. Default = 0.5}
@@ -30,19 +30,19 @@ upper quartile, and middle 50 percent of the data.
 Does plot of estimated statures against modified Fully statures
 for Ruff's European data.  The analyzed data can be from statures estimated from
 skeletal height and "partial" skeletal height, just skeletal height, or skeletal
-and "partial" skeletal height for just Italian females.
+and "partial" skeletal height for just Iberian females.
 }
 \details{
 Estimates statures using \link{Europe} data with modified Fully statures
 from skeletal height or partial skeletal height, \link{Europe2} data set from
-skeletal height only, or \link{Italy} subset of "Europe" that only includes Italian females.
+skeletal height only, or \link{Iberia} subset of "Europe" that only includes Iberian females.
 The regression equations are from Albanese et al. (2016) Table 3 - "Generic stature
 equations (both sexes combined)".
 }
 \examples{
 # Default using femur, European data, and area = 0.5
   A_run()
-# Using tibia, Italian female data, and default area = 0.5
+# Using tibia, Iberian female data, and default area = 0.5
   A_run(i.which='Tib',which.dat=3)
 }
 \references{
