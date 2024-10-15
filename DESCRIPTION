@@ -5,6 +5,7 @@ Version: 0.1.0
 Author: Lyle W. Konigsberg
 Maintainer: Lyle W. Konigsberg <lylek@illinois.edu>
 Description: Applies published stature estimators to Ruff's European data
+VignetteBuilder: knitr
 License: CCO
 Encoding: UTF-8
 LazyData: true
