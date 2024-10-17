@@ -1,12 +1,11 @@
 ---
-title: "Konigsberg et al. (1998) estimation of stature"
+title: "Kberg et al stature"
 author: "Lyle W. Konigsberg"
 date: "`r Sys.Date()`"
 bibliography: bibliography.bibtex
-output:
-  html_document: default
+output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Konigsberg et al. (1998) estimation of stature}
+  %\VignetteIndexEntry{Kberg et al stature}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 ---
