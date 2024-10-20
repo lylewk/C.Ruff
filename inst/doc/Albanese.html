@@ -12,9 +12,9 @@
 
 <meta name="author" content="Lyle W. Konigsberg" />
 
-<meta name="date" content="2024-10-18" />
+<meta name="date" content="2024-10-20" />
 
-<title>A et al stature</title>
+<title>Albanese et al. (2016) stature</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -361,9 +361,9 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<h1 class="title toc-ignore">A et al stature</h1>
+<h1 class="title toc-ignore">Albanese et al. (2016) stature</h1>
 <h4 class="author">Lyle W. Konigsberg</h4>
-<h4 class="date">2024-10-18</h4>
+<h4 class="date">2024-10-20</h4>
 
 
 
@@ -451,39 +451,39 @@ actual statures, as in the plot.</p>
 #&gt; 23 31 3</code></pre>
 <p>Now let’s do the binomial test for the proportion in the 50%
 prediction intervals for the overall data.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>sto<span class="ot">=</span><span class="dv">23</span><span class="sc">+</span><span class="dv">31</span><span class="sc">+</span><span class="dv">3</span></span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>sto<span class="ot">=</span><span class="dv">25</span><span class="sc">+</span><span class="dv">15</span><span class="sc">+</span><span class="dv">2</span></span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="fu">print</span>(sto)</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co">#&gt; [1] 57</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">binom.test</span>(<span class="dv">23</span>,sto,<span class="fl">0.5</span>))</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co">#&gt; [1] 42</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">binom.test</span>(<span class="dv">25</span>,sto,<span class="fl">0.5</span>))</span>
 <span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="co">#&gt;  Exact binomial test</span></span>
 <span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co">#&gt; data:  23 and sto</span></span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co">#&gt; number of successes = 23, number of trials = 57, p-value = 0.1849</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co">#&gt; data:  25 and sto</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co">#&gt; number of successes = 25, number of trials = 42, p-value = 0.28</span></span>
 <span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="co">#&gt; alternative hypothesis: true probability of success is not equal to 0.5</span></span>
 <span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="co">#&gt; 95 percent confidence interval:</span></span>
-<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="co">#&gt;  0.2756127 0.5417866</span></span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="co">#&gt;  0.4328209 0.7437091</span></span>
 <span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a><span class="co">#&gt; sample estimates:</span></span>
 <span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a><span class="co">#&gt; probability of success </span></span>
-<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a><span class="co">#&gt;              0.4035088</span></span></code></pre></div>
-<p>Not so bad. The probability value is (sort of) high and the 95%
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a><span class="co">#&gt;              0.5952381</span></span></code></pre></div>
+<p>Not bad! The probability value is (sort of) high and the 95%
 confidence interval for the proportion in the 50% PIs contains 0.5. Now
 let’s look for bias.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>sto<span class="ot">=</span><span class="dv">23</span><span class="sc">+</span><span class="dv">3</span></span>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>sto<span class="ot">=</span><span class="dv">25</span><span class="sc">+</span><span class="dv">2</span></span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="fu">print</span>(sto)</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">#&gt; [1] 26</span></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">binom.test</span>(<span class="dv">23</span>,sto,<span class="fl">0.5</span>))</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">#&gt; [1] 27</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">binom.test</span>(<span class="dv">25</span>,sto,<span class="fl">0.5</span>))</span>
 <span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co">#&gt;  Exact binomial test</span></span>
 <span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="co">#&gt; data:  23 and sto</span></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="co">#&gt; number of successes = 23, number of trials = 26, p-value = 8.798e-05</span></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="co">#&gt; data:  25 and sto</span></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="co">#&gt; number of successes = 25, number of trials = 27, p-value = 5.648e-06</span></span>
 <span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="co">#&gt; alternative hypothesis: true probability of success is not equal to 0.5</span></span>
 <span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="co">#&gt; 95 percent confidence interval:</span></span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="co">#&gt;  0.6984596 0.9755419</span></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="co">#&gt;  0.7571017 0.9908999</span></span>
 <span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a><span class="co">#&gt; sample estimates:</span></span>
 <span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a><span class="co">#&gt; probability of success </span></span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a><span class="co">#&gt;              0.8846154</span></span></code></pre></div>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a><span class="co">#&gt;              0.9259259</span></span></code></pre></div>
 <p>Terrible! The <span class="citation">Albanese et al. (2016)</span>
 equation is clearly overestimating stature. This is not suprising, as on
 the overall dataset there was overestimation, and the Iberian females
@@ -520,13 +520,13 @@ groups…</p>
 <div id="ref-RN10415" class="csl-entry">
 Albanese, John, Andrew Tuck, José Gomes, and Hugo FV Cardoso. 2016.
 <span>“An Alternative Approach for Estimating Stature from Long Bones
-That Is Not Population-or Group-Specific.”</span> Journal Article.
-<em>Forensic Science International</em> 259: 59–68.
+That Is Not Population-or Group-Specific.”</span> <em>Forensic Science
+International</em> 259: 59–68.
 </div>
 <div id="ref-RN12182" class="csl-entry">
 Ruff, Christopher. 2018. <em>Skeletal Variation and Adaptation in
-Europeans : Upper Paleolithic to the Twentieth Century</em>. Book.
-Hoboken, NJ: Wiley Blackwell. <a href="https://doi.org/10.1002/9781118628430">https://doi.org/10.1002/9781118628430</a>.
+Europeans : Upper Paleolithic to the Twentieth Century</em>. Hoboken,
+NJ: Wiley Blackwell. <a href="https://doi.org/10.1002/9781118628430">https://doi.org/10.1002/9781118628430</a>.
 </div>
 </div>
 </div>
